@@ -33,7 +33,9 @@ class ChildTest < ActiveSupport::TestCase
       assert_equal ["Alex", "Mark"], Child.active.alphabetical.map{|c| c.first_name}
     end
 
-    
+    should "have points_earned method that calculates points" do
+      assert_equal 0, @alex.points_earned
+    end
   end
    
 end
